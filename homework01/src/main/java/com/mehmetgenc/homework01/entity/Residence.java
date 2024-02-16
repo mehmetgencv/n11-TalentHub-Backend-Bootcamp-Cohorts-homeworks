@@ -6,15 +6,7 @@ public class Residence {
     private Double squareMeter;
     private Integer numberOfRooms;
     private Integer numberOfLivingRooms;
-    private ResidenceType residenceType;
-
-    public ResidenceType getResidenceType() {
-        return residenceType;
-    }
-
-    public void setResidenceType(ResidenceType residenceType) {
-        this.residenceType = residenceType;
-    }
+    protected  ResidenceType residenceType;
 
     public Residence(Integer id, Double price, Double squareMeter, Integer numberOfRooms, Integer numberOfLivingRooms) {
         Id = id;
@@ -24,6 +16,9 @@ public class Residence {
         this.numberOfLivingRooms = numberOfLivingRooms;
     }
 
+    public ResidenceType getResidenceType() {
+        return residenceType;
+    }
 
     public Integer getId() {
         return Id;
@@ -43,5 +38,16 @@ public class Residence {
 
     public Integer getNumberOfLivingRooms() {
         return numberOfLivingRooms;
+    }
+
+    @Override
+    public String toString() {
+        return "Residence{" +
+                "price=" + price +
+                ", squareMeter=" + squareMeter +
+                ", numberOfRooms=" + numberOfRooms +
+                ", numberOfLivingRooms=" + numberOfLivingRooms +
+                ", residenceType=" + residenceType +
+                '}';
     }
 }
