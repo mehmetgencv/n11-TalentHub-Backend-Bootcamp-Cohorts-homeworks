@@ -90,6 +90,15 @@ Here is an example of how to use the application:
     // Perform analyses and filtering...
 ```
 
+### Inputs
+
+[Homework01Application.java](src/main/java/com/mehmetgenc/homework01/Homework01Application.java)
+
+
+### Output
+![Output Image](public/app_output.png)
+
+
 ## Dependencies
 
 This project uses Spring Boot for dependency injection.
