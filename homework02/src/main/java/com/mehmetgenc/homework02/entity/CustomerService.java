@@ -1,8 +1,9 @@
 package com.mehmetgenc.homework02.entity;
 
+import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
-import java.util.Map;
+import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 
 /**
@@ -41,4 +42,40 @@ public class CustomerService {
                 .flatMap(customer -> customer.getInvoices().stream())
                 .collect(Collectors.toList());
     }
+
+    public List<Invoice> getInvoicesAboveAmount(Double amount) {
+        return getAllInvoices()
+                .stream()
+                .filter(invoice -> invoice.getAmount() > amount)
+                .collect(Collectors.toList());
+    }
+    public OptionalDouble getAverageAboveAmount(Double amount) {
+        return getAllInvoices()
+                .stream()
+                .filter(invoice -> invoice.getAmount() > amount)
+                .mapToDouble(Invoice::getAmount)
+                .average();
+    }
+
+    public List<String> getCustomersWithInvoicesBelowAmount(Double amount){
+        return customers.stream()
+                .filter(customer -> customer.getInvoices().stream()
+                        .mapToDouble(Invoice::getAmount)
+                        .anyMatch(invoiceAmount -> invoiceAmount < amount))
+                .map(Customer::getName)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> getCustomersWithAverageInvoiceAmountBelowAmountInMonth(Double amount, Month monthOfInvoice){
+        return customers.stream()
+                .filter(customer -> customer.getInvoices().stream()
+                        .filter(invoice -> invoice.getDate().getMonth() == monthOfInvoice)
+                        .mapToDouble(Invoice::getAmount)
+                        .average()
+                        .orElse(0.0) < amount)
+                .map(Customer::getSector)
+                .collect(Collectors.toList());
+
+    }
+
 }
