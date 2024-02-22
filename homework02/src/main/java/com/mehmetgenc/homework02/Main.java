@@ -32,7 +32,7 @@ public class Main {
         customer2.addInvoice(new Invoice(LocalDate.of(2024, 6, 20), 3000));
         customer2.addInvoice(new Invoice(LocalDate.of(2024, 6, 25), 4000));
 
-        Customer customer3 = new Customer(3,"Mert", "Retail", LocalDate.of(2021, 6, 20));
+        Customer customer3 = new Customer(3,"Mert C", "Retail", LocalDate.of(2021, 6, 20));
         customer3.addInvoice(new Invoice(LocalDate.of(2024, 7, 5), 100));
         customer3.addInvoice(new Invoice(LocalDate.of(2024, 7, 10), 100));
 
