@@ -7,6 +7,11 @@ App Name: **`Residence Analysis Application`**
 
 You can find the homework assignments for Week 2 in the [homework01](homework01) directory.
 
+## Homework 02 - Week 3
+App Name: **`Customer Invoice Management System`**
+
+You can find the homework assignments for Week 3 in the [homework02](homework02) directory.
+
 <a href="https://www.n11.com/">
   <img src="public/images/n11_logo.png" alt="N11 Logo">
 </a>
