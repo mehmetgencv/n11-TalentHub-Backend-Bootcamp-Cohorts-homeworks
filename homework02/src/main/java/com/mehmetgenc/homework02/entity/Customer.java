@@ -15,21 +15,21 @@ public class Customer {
 
     private Integer id;
     private String name;
-    private String surname;
+    private String sector;
     private List<Invoice> invoices;
     private LocalDate registeredDate;
 
-    public Customer(Integer id, String name, String surname) {
+    public Customer(Integer id, String name, String sector) {
         this.id = id;
         this.name = name;
-        this.surname = surname;
+        this.sector = sector;
         this.registeredDate = LocalDate.now();
         this.invoices = new ArrayList<>();
     }
-    public Customer(Integer id, String name, String surname,LocalDate registeredDate) {
+    public Customer(Integer id, String name, String sector,LocalDate registeredDate) {
         this.id = id;
         this.name = name;
-        this.surname = surname;
+        this.sector = sector;
         this.registeredDate = registeredDate;
         this.invoices = new ArrayList<>();
     }
@@ -42,8 +42,8 @@ public class Customer {
         return name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getSector() {
+        return sector;
     }
 
     public List<Invoice> getInvoices() {
@@ -67,7 +67,7 @@ public class Customer {
         return "Customer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
+                ", sector='" + sector + '\'' +
                 ", invoices=" + invoices +
                 ", registeredDate=" + registeredDate +
                 '}';
