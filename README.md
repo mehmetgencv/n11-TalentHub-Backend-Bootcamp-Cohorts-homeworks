@@ -12,6 +12,11 @@ App Name: **`Customer Invoice Management System`**
 
 You can find the homework assignments for Week 3 in the [homework02](homework02) directory.
 
+## Homework 03 - Week 4
+App Name: **`Weather API`**
+
+You can find the homework assignments for Week 4 in the [homework03](homework03) directory.
+
 <a href="https://www.n11.com/">
   <img src="public/images/n11_logo.png" alt="N11 Logo">
 </a>
