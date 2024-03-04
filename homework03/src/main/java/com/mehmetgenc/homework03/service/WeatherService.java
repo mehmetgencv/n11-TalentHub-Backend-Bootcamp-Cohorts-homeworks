@@ -21,4 +21,17 @@ public class WeatherService {
 
         return weather;
     }
+
+    public Weather getWeatherForecast(WeatherResponse response) {
+
+        Weather weather = new Weather();
+        weather.setCity(response.getName());
+        weather.setTemperature(response.getMain().getTemp() -273.15 );
+        weather.setWindSpeed(response.getWind().getSpeed());
+        weather.setHumidity(response.getMain().getHumidity());
+        weather.setDescription(response.getWeather()[0].getDescription());
+        weather.setPressure(response.getMain().getPressure());
+
+        return weather;
+    }
 }

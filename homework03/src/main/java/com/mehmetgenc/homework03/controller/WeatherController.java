@@ -32,5 +32,12 @@ public class WeatherController {
 
     }
 
+    @GetMapping("/forecast")
+    public String getWeatherForecast(@RequestParam("city") String city, @RequestParam("apiKey") String apiKey) {
+        String apiResponse = openWeatherMapClient.getWeatherForecast(city, apiKey);
+        Weather weather = weatherService.getWeatherForecast(apiResponse);
+        return
+    }
+
 
 }
